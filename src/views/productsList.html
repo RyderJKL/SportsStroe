@@ -3,7 +3,14 @@
         margin-top:200px;
     }
 </style>
+<div class="col-xs-4">
+    <a href="#/productsList" class="btn btn-block btn-lg btn-info" ng-click=""></a>
+</div>
 <div class="col-xs-8 prolist">
     <!--商品信息-->
-    <h1>dlsjflsa</h1>
+    <div class="well">
+       <h3 ng-repeat="product in products">
+           <strong>{{product}}</strong>
+       </h3>
+    </div>
 </div>

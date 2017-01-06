@@ -13,7 +13,7 @@ gulp.task('html',()=>{
 gulp.task('webserver',()=>{
 	gulp.src('dist').pipe(webserver({
 		livereload:true,
-		open:true
+		open:'views/app.html#/productsList'
 	}));
 });
 

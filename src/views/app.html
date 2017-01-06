@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html >
+<html ng-app="myapp">
 <head>
     <meta charset="UTF-8">
     <title>一个简单的Angular示例</title>
@@ -9,7 +9,7 @@
     <script src="../angular-route.js"></script>
     <script src="../angular-resource.js"></script>
 </head>
-<body ng-app="myapp">
+<body ng-controller="productController">
     <div class="navbar navbar-inverse">
         <a href="#" class="navbar-brand">商店</a>
     </div>
@@ -30,7 +30,7 @@
                 });
         }])
     </script>
-    <!--<script src="../controllers/productListController.js"></script>-->
+    <script src="../controllers/productListController.js"></script>
 </body>
 
 </html>

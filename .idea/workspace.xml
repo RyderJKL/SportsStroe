@@ -18,21 +18,41 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="app.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="app.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/views/app.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="42">
-              <caret line="16" column="41" lean-forward="true" selection-start-line="16" selection-start-column="41" selection-end-line="16" selection-end-column="41" />
+            <state relative-caret-position="-100">
+              <caret line="7" column="41" lean-forward="false" selection-start-line="7" selection-start-column="41" selection-end-line="7" selection-end-column="41" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="productListController.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="productListController.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/controllers/productListController.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="12" column="3" lean-forward="true" selection-start-line="12" selection-start-column="3" selection-end-line="12" selection-end-column="3" />
+            <state relative-caret-position="187">
+              <caret line="42" column="14" lean-forward="true" selection-start-line="42" selection-start-column="14" selection-end-line="42" selection-end-column="14" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="productsList.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/views/productsList.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="6" column="77" lean-forward="false" selection-start-line="6" selection-start-column="77" selection-end-line="6" selection-end-column="77" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="gulpfile.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/gulpfile.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="140">
+              <caret line="10" column="3" lean-forward="false" selection-start-line="10" selection-start-column="3" selection-end-line="10" selection-end-column="3" />
               <folding />
             </state>
           </provider>
@@ -58,11 +78,12 @@
         <option value="$PROJECT_DIR$/src/views/cartSummary.html" />
         <option value="$PROJECT_DIR$/src/filters/customFilters.js" />
         <option value="$PROJECT_DIR$/dist/controllers/productListController.js" />
-        <option value="$PROJECT_DIR$/gulpfile.js" />
-        <option value="$PROJECT_DIR$/src/controllers/productListController.js" />
         <option value="$PROJECT_DIR$/dist/views/app.html" />
-        <option value="$PROJECT_DIR$/src/views/productsList.html" />
         <option value="$PROJECT_DIR$/src/views/app.html" />
+        <option value="$PROJECT_DIR$/node_modules/gulp-webserver/src/index.js" />
+        <option value="$PROJECT_DIR$/gulpfile.js" />
+        <option value="$PROJECT_DIR$/src/views/productsList.html" />
+        <option value="$PROJECT_DIR$/src/controllers/productListController.js" />
       </list>
     </option>
   </component>
@@ -126,10 +147,10 @@
     <handled-path value="$PROJECT_DIR$/node_modules" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="78" />
-    <option name="y" value="18" />
+    <option name="x" value="25" />
+    <option name="y" value="55" />
     <option name="width" value="1220" />
-    <option name="height" value="627" />
+    <option name="height" value="589" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -215,7 +236,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="reference.settings.ide.settings.web.browsers" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.JavaScript" />
     <property name="JavaScriptPreferStrict" value="false" />
     <property name="JavaScriptWeakerCompletionTypeGuess" value="true" />
     <property name="nodejs_interpreter_path" value="E:/Program Files/nodejs/node" />
@@ -226,6 +247,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="js-jscs-nodeInterpreter" value="E:\Program Files\nodejs\node.exe" />
     <property name="js.buildTools.gulp.gulp_package_dir" value="D:\Git-Repository\SimpleAngularDemo\node_modules\gulp" />
+    <property name="editor.config.accepted" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -238,6 +260,9 @@
       <method />
     </configuration>
     <configuration default="false" name="cartSummary.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/SimpleAngularDemo/src/views/cartSummary.html">
+      <method />
+    </configuration>
+    <configuration default="false" name="productListController.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="project" path-to-js-file="productListController.js" working-dir="$PROJECT_DIR$/src/controllers">
       <method />
     </configuration>
     <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
@@ -299,14 +324,16 @@
       <recursive>false</recursive>
       <method />
     </configuration>
-    <list size="2">
+    <list size="3">
       <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.app.html" />
       <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.cartSummary.html" />
+      <item index="2" class="java.lang.String" itemvalue="Node.js.productListController.js" />
     </list>
     <recent_temporary>
-      <list size="2">
+      <list size="3">
         <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.app.html" />
-        <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.cartSummary.html" />
+        <item index="1" class="java.lang.String" itemvalue="Node.js.productListController.js" />
+        <item index="2" class="java.lang.String" itemvalue="JavaScript Debug.cartSummary.html" />
       </list>
     </recent_temporary>
   </component>
@@ -321,25 +348,25 @@
       <option name="presentableId" value="Default" />
       <updated>1483620981090</updated>
       <workItem from="1483620984599" duration="102000" />
-      <workItem from="1483662842806" duration="20830000" />
+      <workItem from="1483662842806" duration="28699000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="20932000" />
+    <option name="totallyTimeSpent" value="28801000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="78" y="18" width="1220" height="627" extended-state="0" />
+    <frame x="25" y="55" width="1220" height="589" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.14111365" sideWeight="0.50642204" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23096447" sideWeight="0.493578" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.03722504" sideWeight="0.493578" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="REST Client" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5222672" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3299595" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -438,14 +465,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gulpfile.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="622">
-          <caret line="58" column="0" lean-forward="true" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/dist/views/app.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="520">
@@ -454,26 +473,66 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/views/productsList.html">
+    <entry file="file://$PROJECT_DIR$/node_modules/gulp-livereload/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="8" column="6" lean-forward="true" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/controllers/productListController.js">
+    <entry file="file://$PROJECT_DIR$/node_modules/gulp-webserver/.editorconfig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="12" column="3" lean-forward="true" selection-start-line="12" selection-start-column="3" selection-end-line="12" selection-end-column="3" />
+        <state relative-caret-position="200">
+          <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/gulp-webserver/src/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="640">
+          <caret line="32" column="12" lean-forward="true" selection-start-line="32" selection-start-column="12" selection-end-line="32" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/gulp-webserver/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2104">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gulpfile.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="10" column="3" lean-forward="false" selection-start-line="10" selection-start-column="3" selection-end-line="10" selection-end-column="3" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/views/app.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="42">
-          <caret line="16" column="41" lean-forward="true" selection-start-line="16" selection-start-column="41" selection-end-line="16" selection-end-column="41" />
+        <state relative-caret-position="-100">
+          <caret line="7" column="41" lean-forward="false" selection-start-line="7" selection-start-column="41" selection-end-line="7" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/productsList.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="6" column="77" lean-forward="false" selection-start-line="6" selection-start-column="77" selection-end-line="6" selection-end-column="77" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controllers/productListController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="42" column="14" lean-forward="true" selection-start-line="42" selection-start-column="14" selection-end-line="42" selection-end-column="14" />
           <folding />
         </state>
       </provider>
