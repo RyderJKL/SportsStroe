@@ -1,7 +1,7 @@
 /**
  * Created by onejustone on 2017/1/10.
  */
-angular.module('myapp', ['customFilters','ngRoute'])
+angular.module('myapp', ['customFilters', 'cart', 'ngRoute'])
 .config(['$routeProvider', '$locationProvider', function ($routeProvider, $locationProvider) {
 	$locationProvider.html5Mode(false).hashPrefix('');
 	// 解决 angular1.6 在h5 中的 url 解析问题
@@ -10,6 +10,8 @@ angular.module('myapp', ['customFilters','ngRoute'])
 	$routeProvider
 	.when('/productsList', {
 		templateUrl: 'productsList.html'
+	}).when('/checkout', {
+		templateUrl: 'checkout.html'
 	}).otherwise({
 		redirectTo:'productsList.html'
 	})

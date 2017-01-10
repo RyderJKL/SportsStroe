@@ -5,9 +5,10 @@ angular.module('myapp')
     .constant('productCategoryClass', 'btn-danger')
     .constant('productListCount', 3)
     .constant('dataUrl', 'http://localhost:2403/products')
-    .controller('productController', ['$scope','$http','$filter', 'productCategoryClass','productListCount', 'dataUrl',
-	    function ($scope, $http, $filter, productCategoryClass, productListCount,dataUrl) {
-        $http.get(dataUrl).then(function (data) {
+    .controller('productController', ['$scope','$http','$filter', 'productCategoryClass','productListCount', 'dataUrl','cart',
+	    function ($scope, $http, $filter, productCategoryClass, productListCount, dataUrl, cart) {
+
+    	$http.get(dataUrl).then(function (data) {
             $scope.products = data.data;
         }, function (error) {
             console.log(error)
@@ -28,7 +29,6 @@ angular.module('myapp')
         var selectCategory = null;
 
         $scope.selectCategoryItem = function (newCategory) {
-        	console.log(newCategory)
 	        selectCategory = newCategory;
 	        $scope.currentPage = 1;
         }
@@ -41,8 +41,17 @@ angular.module('myapp')
         	// console.log(selectCategory)
 	        // null == undefined (true)
 	        // 所以，home 被默认选中
-	        console.log(c)
 	        return selectCategory == c ? productCategoryClass : "";
         }
 
-    }]);
+        $scope.addProduct2Cart = function (product) {
+	        cart.addProduct(product.id, product.name, product.price)
+        }
+
+        $scope.removeProducts = function (id) {
+	        cart.removeProduct(id)
+        }
+    }]).controller('checkOutCtrl', ['$scope', 'cart', function ($scope, cart) {
+		$scope.cartData = cart.getProducts();
+
+}]);
