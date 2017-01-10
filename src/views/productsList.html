@@ -1,16 +1,43 @@
-<style>
-    .prolist {
-        margin-top:200px;
-    }
-</style>
+
 <div class="col-xs-4">
-    <a href="#/productsList" class="btn btn-block btn-lg btn-info" ng-click=""></a>
+    <a href="#/productsList"
+       class="btn btn-block btn-lg btn-info"
+       ng-click="selectCategoryItem()"
+       ng-class="getCategoryClass()">Home
+    </a>
+    <!--点击 ng-click 以后发生了什么??-->
+    <a href="#/productsList" class="btn btn-block btn-default btn-lg"
+       ng-repeat="item in products | unique:'category'"
+       ng-click="selectCategoryItem(item)"
+       ng-class="getCategoryClass(item)"
+    >
+        {{item}}
+    </a>
+
 </div>
-<div class="col-xs-8 prolist">
+<div class="col-xs-8 prolist" ng-hide="error">
     <!--商品信息-->
-    <div class="well">
-       <h3 ng-repeat="product in products">
-           <strong>{{product}}</strong>
-       </h3>
+    <div class="well" ng-repeat="product in products |
+     filter:categoryFilterFn | range:currentPage:pageSize">
+       <h3>
+           <strong ng-bind="product.name"></strong>
+           <span class="pull-right label label-primary">
+               {{product.price | currency:'￥'}}
+           </span>
+        </h3>
+        <span class="lead">
+            {{product.discription}}
+        </span>
     </div>
+</div>
+
+<div class="pull-right btn-group">
+    <a href="#/productsList" ng-repeat="page in products |
+    filter:categoryFilterFn |
+    pageCount:pageSize"
+    class="btn btn-default"
+    ng-click="selectPage($index +1)"
+    ng-class="getPageClass($index + 1)">
+        {{page +1}}
+    </a>
 </div>

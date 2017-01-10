@@ -4,46 +4,45 @@
 angular.module('myapp')
     .constant('productCategoryClass', 'btn-danger')
     .constant('productListCount', 3)
-    .constant('pl', 'productsList.html')
-    .constant('dataUrl', 'http://localhost:2403/dashboard/products')
-    .controller('productController', ['$scope','$http','productCategoryClass','productListCount',
-        'pl','dataUrl', function ($scope, $http, dataUrl) {
+    .constant('dataUrl', 'http://localhost:2403/products')
+    .controller('productController', ['$scope','$http','$filter', 'productCategoryClass','productListCount', 'dataUrl',
+	    function ($scope, $http, $filter, productCategoryClass, productListCount,dataUrl) {
         $http.get(dataUrl).then(function (data) {
             $scope.products = data.data;
         }, function (error) {
             console.log(error)
         });
 
-        $scope.pl = pl;
-
-        // 当前页
         $scope.currentPage = 1;
 
-
-        // 每页多少条记录
         $scope.pageSize = productListCount;
 
-        // 跳转页面
         $scope.selectPage = function (p) {
-            $scope.currentPage = p;
-        };
+	        $scope.currentPage = p;
+        }
 
-        // 设置选择页码的样式
-            $scope.setPageClass = function (p) {
-                return $scope.currentPage == p ? 'btn-info' : '';
-            };
+        $scope.getPageClass = function (p) {
+	        return $scope.currentPage == p ? 'btn-info' : " ";
+        }
 
-		    var selectCategory = null;
+        var selectCategory = null;
 
+        $scope.selectCategoryItem = function (newCategory) {
+        	console.log(newCategory)
+	        selectCategory = newCategory;
+	        $scope.currentPage = 1;
+        }
 
-		// 选中商品的类别
-		    $scope.selectCategoryItem = function (categoryName) {
-			    selectCategory = categoryName;
-			    $scope.currentPage = 1;
-		    };
+        $scope.categoryFilterFn = function (product) {
+	        return selectCategory == null || product.category == selectCategory;
+        }
 
-		// 通过用户选中的种类，对数据进行过滤,ture 过滤， flase 不过滤
-		    $scope.categoryFilterFn = function (product) {
-			    return selectCategory == null || product.category
-		    };
+        $scope.getCategoryClass = function (c) {
+        	// console.log(selectCategory)
+	        // null == undefined (true)
+	        // 所以，home 被默认选中
+	        console.log(c)
+	        return selectCategory == c ? productCategoryClass : "";
+        }
+
     }]);

@@ -17,20 +17,24 @@
     <div class="panel panel-default row">
         <div ng-view></div>
     </div>
-    <script>
-        var s = angular.module('myapp', ['ngRoute']);
-        s.config(['$routeProvider', '$locationProvider', function ($routeProvider, $locationProvider) {
-            $locationProvider.html5Mode(false).hashPrefix('');
-            // 解决 angular1.6 在h5 中的 url 解析问题
-
-            // 下面开始进行路由设置
-            $routeProvider
-                .when('/productsList', {
-                    templateUrl: 'productsList.html'
-                });
-        }])
-    </script>
-    <script src="../controllers/productListController.js"></script>
 </body>
+<script>
+//	angular.module('myapp', ['customFilters','ngRoute'])
+//	.config(['$routeProvider', '$locationProvider', function ($routeProvider, $locationProvider) {
+//		$locationProvider.html5Mode(false).hashPrefix('');
+//		// 解决 angular1.6 在h5 中的 url 解析问题
+//
+//		// 下面开始进行路由设置
+//		$routeProvider
+//		.when('/productsList', {
+//			templateUrl: 'productsList.html'
+//		})
+//	}]);
+
+</script>
+<script src="../route/indexRoute.js"></script>
+<script src="../controllers/productListController.js"></script>
+<script src="../filters/customFilters.js"></script>
+
 
 </html>
