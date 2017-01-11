@@ -13,18 +13,28 @@ gulp.task('html',()=>{
 gulp.task('webserver',()=>{
 	gulp.src('dist').pipe(webserver({
 		livereload:true,
-		open:'views/app.html#/productsList'
+		port:'8887',
+		open:'views/index.html'
 	}));
 });
 
-//注册css任务
-gulp.task('sass',()=>{
+//注册生产环境 Sass 任务
+gulp.task('buildSass',()=>{
 	return sass('src/sass/**/*.scss',{style:'compact'})//简洁格式的css
 	.on('error',function(err){
 		console.log('编译sass出错%s',err.message);
 	})//指明文件路径  /**/监听目录下所有的.html文件
     .pipe(gulp.dest('dist/sass'));//输出路径
 });
+
+//注册开发环境 Sass 任务
+gulp.task('devlopSass', () => {
+	return sass('src/sass/**/*.scss',{style:'compact'})
+	.on('error',function(err){
+		console.log('编译sass出错%s',err.message);
+	})
+	.pipe(gulp.dest('src/sass/'));//输出路径
+})
 
 //注册js任务
 gulp.task('myjs',()=>{
@@ -53,14 +63,19 @@ gulp.task('watch',function(){
 });
 
 // 监听 sass
-gulp.task('watchSass', function () {
-	gulp.watch('src/sass/**/*.scss', ['sass'])
+gulp.task('watchBuildSass', function () {
+	gulp.watch('src/sass/**/*.scss', ['buildSass'])
 })
+
+gulp.task('watchDevlopSass', function () {
+	gulp.watch('src/sass/**/*.scss', ['devlopSass'])
+})
+
 
 gulp.task("watchJs", function () {
 	gulp.watch('src/**/*.js', ['myjs'])
 })
 //默认任务
-gulp.task('default',['sass','html','myjs','images','node','webserver','watch','watchSass', 'watchJs'], function () {
+gulp.task('default',['buildSass','devlopSass','html','myjs','images','node','webserver','watch','watchBuildSass', 'watchDevlopSass','watchJs'], function () {
 	console.log('yes')
 });

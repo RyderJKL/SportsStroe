@@ -16,13 +16,13 @@
             </tr>
             </thead>
             <tbody>
-                <tr ng-repeat="item in cartData">
+                <tr ng-repeat="item in cartData | orderBy:item.count">
                     <td class="text-center">{{item.count}}</td>
                     <td class="text-left">{{item.name}}</td>
                     <td class="text-right">{{item.price | currency: '￥'}}</td>
-                    <td class="text-right">{{item.price * item.count}}</td>
+                    <td class="text-right">{{(item.price * item.count) | currency:'￥'}}</td>
                     <td>
-                        <button ng-click="removeProducts(item.id)"></button>
+                        <button ng-click="removeProducts(item.id)">删除</button>
                     </td>
                 </tr>
             </tbody>
@@ -36,6 +36,10 @@
             </tfoot>
 
         </table>
+
+        <div class="text-center">
+            <a href="#/productsList" class="btn btn-primary">Continue shopping</a>
+            <a href="#/placeholder" class="btn btn-primary">Place order now</a>
+        </div>
     </div>
 </div>
-<a href="#/productsList" class="btn btn-default btn-lg btn-block btn-info">返回</a>
