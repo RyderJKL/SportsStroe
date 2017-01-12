@@ -13,15 +13,18 @@
     <div class="navbar navbar-inverse">
         <a href="#" class="navbar-brand">商店</a>
         <!--购物车-->
-        <!--购物车<ng-include src="'cartSummary.html'"></ng-include>-->
         购物车:<cart-summary />
         <!--自定义指令，自动跳转到 cartSummary.html 页面-->
-
     </div>
 
-    <div class="panel panel-default row">
-        <div ng-view></div>
+    <!--错误提示页-->
+    <div class="alert alrt-danger" ng-show="products.error">
+        Error （{{products.error.status}}）. The product was not loaded.
+        <a href="/app.html" class="alert-link">Click me to try again</a>
     </div>
+
+
+    <ng-view />
 </body>
 <script>
 

@@ -31,6 +31,7 @@ angular.module('cart', [])
 		},
 
 		removeProduct:function (id) {
+			// 删除商品
 			for(let i=0;i < cartData.length;i++){
 				if(cartData[i]['id'] == id){
 					cartData.splice(i, 1);
@@ -40,16 +41,20 @@ angular.module('cart', [])
 		},
 
 		getProducts: function () {
+			// 放回购物车数组
 			return cartData;
 		}
 	}
 }).directive('cartSummary', function (cart) {
+	// 自定义指令
+	// 用于结算购物车中的商品
 	return {
 		controller: function ($scope, $element, $attrs) {
+
 			let cartProductsArr = cart.getProducts();
-
+			// 获得购物车
 			$scope.totalPrice = function () {
-
+				// 总价
 				let total = 0;
 				for(let i = 0;i < cartProductsArr.length; i++){
 					total += (cartProductsArr[i]['price'] * cartProductsArr[i]['count']);
@@ -59,6 +64,7 @@ angular.module('cart', [])
 			}
 
 			$scope.cartItemCount = function () {
+				// 商品数量
 				let totalItem = 0;
 				for(let i=0;i < cartProductsArr.length;i++){
 					totalItem += cartProductsArr[i]['count'];
@@ -70,7 +76,9 @@ angular.module('cart', [])
 		},
 
 		restrict: 'E',
+		// 指定自定义指令的调用规则，`E` 代表以元素的形式调用
 		templateUrl: '../views/cartSummary.html'
+	//	templateUrl 属性，指定自定义指令显示的页面
 	}
 });
  

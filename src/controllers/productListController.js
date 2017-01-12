@@ -4,14 +4,17 @@
 angular.module('myapp')
     .constant('productCategoryClass', 'btn-danger')
     .constant('productListCount', 3)
-    .constant('dataUrl', 'http://localhost:2403/products')
+    .constant('dataUrl', 'http://localhost:2403/products/')
     .controller('productController', ['$scope','$http','$filter', 'productCategoryClass','productListCount', 'dataUrl','cart',
 	    function ($scope, $http, $filter, productCategoryClass, productListCount, dataUrl, cart) {
 
+    	$scope.products = {};
+
     	$http.get(dataUrl).then(function (data) {
-            $scope.products = data.data;
+            // AnguarJS 通过 $http 服务实现对 Ajax 的支持
+            $scope.products.data = data.data;
         }, function (error) {
-            console.log(error)
+    		$scope.products.error = error;
         });
 
         $scope.currentPage = 1;

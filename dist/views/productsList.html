@@ -1,4 +1,5 @@
 
+<div class="panel panel-default row" ng-hide="products.error">
 <div class="col-xs-4">
     <a href="#/productsList"
        class="btn btn-block btn-lg btn-info"
@@ -7,7 +8,7 @@
     </a>
     <!--点击 ng-click 以后发生了什么??-->
     <a href="#/productsList" class="btn btn-block btn-default btn-lg"
-       ng-repeat="item in products | unique:'category'"
+       ng-repeat="item in products.data | unique:'category'"
        ng-click="selectCategoryItem(item)"
        ng-class="getCategoryClass(item)"
     >
@@ -15,9 +16,9 @@
     </a>
 
 </div>
-<div class="col-xs-8 prolist" ng-hide="error">
+<div class="col-xs-8 prolist">
     <!--商品信息-->
-    <div class="well" ng-repeat="product in products |
+    <div class="well" ng-repeat="product in products.data |
      filter:categoryFilterFn | range:currentPage:pageSize">
        <h3>
            <strong ng-bind="product.name"></strong>
@@ -33,7 +34,7 @@
 </div>
 
 <div class="pull-right btn-group">
-    <a href="#/productsList" ng-repeat="page in products |
+    <a href="#/productsList" ng-repeat="page in products.data |
     filter:categoryFilterFn |
     pageCount:pageSize"
     class="btn btn-default"
@@ -41,4 +42,5 @@
     ng-class="getPageClass($index + 1)">
         {{page +1}}
     </a>
+</div>
 </div>
