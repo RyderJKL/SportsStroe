@@ -12,8 +12,8 @@ angular.module('myapp', ['customFilters', 'cart', 'ngRoute'])
 		templateUrl: 'productsList.html'
 	}).when('/checkout', {
 		templateUrl: 'checkout.html'
-	}).when('/placeorder',{
-		templateUrl: 'placeOrder.html'
+	}).when('/placeholder',{
+		templateUrl: 'placeorder.html'
 	})
 	// .otherwise({
 	// 	redirectTo:'/'

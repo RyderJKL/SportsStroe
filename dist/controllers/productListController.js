@@ -5,8 +5,14 @@ angular.module('myapp')
     .constant('productCategoryClass', 'btn-danger')
     .constant('productListCount', 3)
     .constant('dataUrl', 'http://localhost:2403/products/')
-    .controller('productController', ['$scope','$http','$filter', 'productCategoryClass','productListCount', 'dataUrl','cart',
-	    function ($scope, $http, $filter, productCategoryClass, productListCount, dataUrl, cart) {
+	.constant('orderUrl', 'http://localhost:2403/order/')
+    .controller('productController',
+	    ['$scope','$http','$filter', '$location',
+	    'productCategoryClass','productListCount',
+	    'dataUrl','cart','orderUrl',
+	    function ($scope, $http, $filter, $location,
+	              productCategoryClass, productListCount,
+	              dataUrl, cart, orderUrl) {
 
     	$scope.products = {};
 
@@ -54,7 +60,22 @@ angular.module('myapp')
         $scope.removeProducts = function (id) {
 	        cart.removeProduct(id)
         }
+
+        $scope.sendOrder = function (shippingDetails) {
+	        let order = angular.copy(shippingDetails);
+	        order.products = cart.getProducts();
+
+	        $http.post(orderUrl, order).then(function (data) {
+		        $scope.orderData.orderId = data.id;
+		        cart.getProducts().length = 0;
+	        }, function (error) {
+		        $scope.orderData.orderError = error;
+	        }).then(function () {
+		        $location.path('/complete');
+	        })
+        }
     }]).controller('checkOutCtrl', ['$scope', 'cart', function ($scope, cart) {
 		$scope.cartData = cart.getProducts();
+
 
 }]);
