@@ -14,7 +14,7 @@ gulp.task('webserver',()=>{
 	gulp.src('dist').pipe(webserver({
 		livereload:true,
 		port:'8887',
-		open:'views/app.html'
+		open:'views/app.html#/productsList'
 	}));
 });
 

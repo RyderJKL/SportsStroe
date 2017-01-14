@@ -5,7 +5,7 @@ angular.module('myapp')
     .constant('productCategoryClass', 'btn-danger')
     .constant('productListCount', 3)
     .constant('dataUrl', 'http://localhost:2403/products/')
-	.constant('orderUrl', 'http://localhost:2403/order/')
+	.constant('orderUrl', 'http://localhost:2403/order')
     .controller('productController',
 	    ['$scope','$http','$filter', '$location',
 	    'productCategoryClass','productListCount',
@@ -62,17 +62,22 @@ angular.module('myapp')
         }
 
         $scope.sendOrder = function (shippingDetails) {
-	        let order = angular.copy(shippingDetails);
+	        var order = angular.copy(shippingDetails);
+	        console.log(order);
+	        // console.log(cart.getProducts())
 	        order.products = cart.getProducts();
 
 	        $http.post(orderUrl, order).then(function (data) {
-		        $scope.orderData.orderId = data.id;
+	        	console.log(data)
+		        $scope.products.orderId = data.data.id;
+		        console.log($scope.products.orderId);
 		        cart.getProducts().length = 0;
 	        }, function (error) {
-		        $scope.orderData.orderError = error;
+		        $scope.products.orderError = error;
 	        }).then(function () {
 		        $location.path('/complete');
 	        })
+
         }
     }]).controller('checkOutCtrl', ['$scope', 'cart', function ($scope, cart) {
 		$scope.cartData = cart.getProducts();
