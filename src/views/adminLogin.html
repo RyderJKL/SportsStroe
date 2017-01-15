@@ -1,0 +1,30 @@
+<!--创建管理员输入用户名和密码的视图-->
+<div class="well" ng-controller="authCtrl">
+    <div class="alert alert-info" ng-hide="authenticationErroe">
+        Enter your username and password and click Log In to authenticate.
+    </div>
+
+    <div class="alert alert-danger" ng-show="authenticationError">
+        Authentication Failed ({{authenticationError.status}}). Try again.
+    </div>
+
+    <form name="authForm" novalidate>
+        <div class="form-group">
+            <label for="">Username</label>
+            <input type="text" ng-model="username" name="username" class="form-control" required>
+        </div>
+
+        <div class="form-group">
+            <label for="">Password</label>
+            <input type="text" name="password" ng-model="password" required class="form-control">
+        </div>
+
+        <div class="text-center">
+            <button class="btn btn-primary"
+                    ng-click="authenticate(username, password)"
+                    ng-disabled="authForm.$invalid">
+                Log In
+            </button>
+        </div>
+    </form>
+</div>

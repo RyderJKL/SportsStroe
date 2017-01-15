@@ -78,9 +78,8 @@ angular.module('myapp')
 		        $location.path('/complete');
 	        })
 
+
         }
     }]).controller('checkOutCtrl', ['$scope', 'cart', function ($scope, cart) {
 		$scope.cartData = cart.getProducts();
-
-
 }]);

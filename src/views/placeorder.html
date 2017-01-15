@@ -1,7 +1,7 @@
 <!--运输详情页-->
 
 <style>
-    <!--添加用户表单信息反馈-->
+    /*<!--添加用户表单信息反馈-->*/
     .ng-invalid {background-color: lightpink;}
     .ng-valid {background-color: lightgreen;}
     span.error { color:red; font-weight:bold;}
@@ -11,7 +11,7 @@
 <p>Please enter you details, and we'll ship your goods right away.</p>
 
 <!--添加form表单并写入 Angular 表单验证-->
-<form action="" name="shippingForm" novalidate></form>
+<form name="shippingForm" novalidate>
 <!--novalidate HTML5 属性，表示禁用任何浏览器表单验证。从而使用 Angular 表单验证-->
 <div class="well">
     <h3>Ship to</h3>
@@ -56,7 +56,7 @@
 
 
     <div class="form-group">
-        <label for="Country"></label>
+        <label for="country">Country</label>
         <input type="text" name="country" ng-model="dataForm.shipping.country" required class="form-control">
         <span class="error" ng-show="shippingForm.country.$error.required">
             Please enter a country
@@ -73,6 +73,6 @@
     <div class="text-center">
         <button ng-disabled="shippingForm.$invalid" class="btn btn-primary"
                 ng-click="sendOrder(dataForm.shipping)">Complete order</button>
-        <!---->
     </div>
 </div>
+</form>

@@ -1,0 +1,16 @@
+<!--当管理员验证完成以后显示该视图，用于管理员管理产品分类的内容以及查看订单队列-->
+
+<div class="panel panel-default row" ng-controller="mainCtrl">
+    <div class="col-xs-3 panel-body">
+        <a ng-repeat="item in screens" class="btn btn-block btn-default "
+           ng-class="{'btn-primary' : item == current}"
+           ng-click="setScreen($index)"
+        >
+            {{item}}
+        </a>
+    </div>
+
+    <div class="col-xs-8 panel-body">
+        <div ng-include="getScreen()"></div>
+    </div>
+</div>
