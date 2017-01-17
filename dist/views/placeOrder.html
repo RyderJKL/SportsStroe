@@ -11,7 +11,7 @@
 <p>Please enter you details, and we'll ship your goods right away.</p>
 
 <!--添加form表单并写入 Angular 表单验证-->
-<form action="" name="shippingForm" novalidate></form>
+<form name="shippingForm" novalidate>
 <!--novalidate HTML5 属性，表示禁用任何浏览器表单验证。从而使用 Angular 表单验证-->
 <div class="well">
     <h3>Ship to</h3>
@@ -75,3 +75,4 @@
                 ng-click="sendOrder(dataForm.shipping)">Complete order</button>
     </div>
 </div>
+</form>
