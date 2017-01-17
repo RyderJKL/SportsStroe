@@ -2,24 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="87493c27-fe32-4cbe-b971-aa04d183f2c5" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/controllers/adminController.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/route/adminRoute.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/views/adminLogin.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/views/adminMain.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/views/adminOrders.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/views/adminProducts.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/controllers/adminProductsController.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/views/app.html" afterPath="$PROJECT_DIR$/dist/views/app.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/views/appAdmin.html" afterPath="$PROJECT_DIR$/dist/views/appAdmin.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/views/placeOrder.html" afterPath="$PROJECT_DIR$/dist/views/placeOrder.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/route/adminRoute.js" afterPath="$PROJECT_DIR$/src/route/adminRoute.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/views/adminProducts.html" afterPath="$PROJECT_DIR$/src/views/adminProducts.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/views/app.html" afterPath="$PROJECT_DIR$/src/views/app.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/views/appAdmin.html" afterPath="$PROJECT_DIR$/src/views/appAdmin.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/SimpleAngularDemo.iml" afterPath="$PROJECT_DIR$/.idea/SportsStore.iml" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -43,7 +26,7 @@
             <entry file="file://$PROJECT_DIR$/src/controllers/adminProductsController.js">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="0">
-                  <caret line="15" column="5" lean-forward="true" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
+                  <caret line="15" column="5" lean-forward="false" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
                   <folding />
                 </state>
               </provider>
@@ -177,10 +160,10 @@
     <handled-path value="$PROJECT_DIR$/node_modules" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1382" />
-    <option name="height" value="784" />
+    <option name="x" value="647" />
+    <option name="y" value="52" />
+    <option name="width" value="1386" />
+    <option name="height" value="788" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -416,15 +399,15 @@
       <workItem from="1484563139926" duration="1404000" />
       <workItem from="1484571999416" duration="637000" />
       <workItem from="1484652139407" duration="579000" />
-      <workItem from="1484654214652" duration="6464000" />
+      <workItem from="1484654214652" duration="7061000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="109958000" />
+    <option name="totallyTimeSpent" value="110555000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
+    <frame x="647" y="52" width="1386" height="788" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.14111365" sideWeight="0.50642204" order="1" side_tool="true" content_ui="tabs" />
@@ -824,7 +807,7 @@
     <entry file="file://$PROJECT_DIR$/src/controllers/adminProductsController.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="15" column="5" lean-forward="true" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
+          <caret line="15" column="5" lean-forward="false" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
           <folding />
         </state>
       </provider>
